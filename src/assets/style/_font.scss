@@ -1,0 +1,56 @@
+
+$fpath: '../font/';
+$name: 'iranSans/IranSans';
+@font-face {
+  font-family: 'IranSans';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$fpath}#{$name}.eot');
+  src: local('#{$name}'),
+  url('#{$fpath}#{$name}.ttf') format('truetype'),
+  url('#{$fpath}#{$name}.woff') format('woff'),
+  url('#{$fpath}#{$name}.woff2') format('woff2');
+}
+
+$name: 'iranSans/IranSansLight';
+@font-face {
+  font-family: 'IranSansLight';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$fpath}#{$name}.eot');
+  src: local('#{$name}'),
+  url('#{$fpath}#{$name}.ttf') format('truetype'),
+  url('#{$fpath}#{$name}.woff') format('woff'),
+  url('#{$fpath}#{$name}.woff2') format('woff2');
+}
+
+$name: 'iranSans/IranSansBold';
+@font-face {
+  font-family: 'IranSansBold';
+  src: url('#{$fpath}#{$name}.eot');
+  src: local('#{$name}'),
+  url('#{$fpath}#{$name}.ttf') format('truetype'),
+  url('#{$fpath}#{$name}.woff') format('woff'),
+  url('#{$fpath}#{$name}.woff2') format('woff2');
+}
+
+/*
+ * fonts helpers
+**/
+@mixin font-family($type: normal) {
+  @if $type == normal {
+    font-family: IranSans, Tahoma, Arial, Sans-Serif !important;
+  }
+  @if $type == bold {
+    font-family: IranSansBold, Tahoma, Arial, Sans-Serif !important;
+  }
+  @if $type == light {
+    font-family: IranSansLight, Tahoma, Arial, Sans-Serif !important;
+  }
+  @if $type == medium {
+    font-family: IranSansMedium, Tahoma, Arial, Sans-Serif !important;
+  }
+  @if $type == ultra {
+    font-family: IranSansUltraLight, Tahoma, Arial, Sans-Serif !important;
+  }
+}
